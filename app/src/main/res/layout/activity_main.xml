@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Your calculator"
+        android:gravity="center"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:background="@color/design_default_color_secondary"
+        />
+
+    <EditText
+        android:id="@+id/etInput1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Bigger number"
+        android:paddingStart="10dp"
+        android:inputType="number"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/etInput2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Smaller number"
+        android:paddingStart="10dp"
+        android:inputType="number"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="20sp"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/btnSubs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="20sp"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/btnMult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x"
+            android:textSize="20sp"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/btnDiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="20sp"
+            android:layout_marginEnd="10dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
