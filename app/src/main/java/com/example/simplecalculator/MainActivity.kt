@@ -19,35 +19,68 @@ class MainActivity : AppCompatActivity() {
         val btnMult = findViewById<Button>(R.id.btnMult)
         val btnDiv = findViewById<Button>(R.id.btnDiv)
 
-
         btnAdd.setOnClickListener {
-            val input1 = etInput1.text.toString().toInt()
-            val input2 = etInput2.text.toString().toInt()
+            val input1Text = etInput1.text.toString()
+            val input2Text = etInput2.text.toString()
 
-            val result = input1 + input2
-            tvDisplay.text = result.toString()
+            val input1 = input1Text.toIntOrNull()
+            val input2 = input2Text.toIntOrNull()
+
+            if (input1 != null && input2 != null) {
+                val result = input1 + input2
+                tvDisplay.text = result.toString()
+            } else {
+                tvDisplay.text = "Invalid input"
+            }
         }
-        btnSubs.setOnClickListener {
-            val input1 = etInput1.text.toString().toInt()
-            val input2 = etInput2.text.toString().toInt()
 
-            val result = input1 - input2
-            tvDisplay.text = result.toString()
+        btnSubs.setOnClickListener {
+            val input1Text = etInput1.text.toString()
+            val input2Text = etInput2.text.toString()
+
+            val input1 = input1Text.toIntOrNull()
+            val input2 = input2Text.toIntOrNull()
+
+            if (input1 != null && input2 != null) {
+                val result = input1 - input2
+                tvDisplay.text = result.toString()
+            } else {
+                tvDisplay.text = "Invalid input"
+            }
         }
         btnMult.setOnClickListener {
-            val input1 = etInput1.text.toString().toInt()
-            val input2 = etInput2.text.toString().toInt()
+            val input1Text = etInput1.text.toString()
+            val input2Text = etInput2.text.toString()
 
-            val result = input1 * input2
-            tvDisplay.text = result.toString()
+            val input1 = input1Text.toIntOrNull()
+            val input2 = input2Text.toIntOrNull()
+
+            if (input1 != null && input2 != null) {
+                val result = input1 * input2
+                tvDisplay.text = result.toString()
+            } else {
+                tvDisplay.text = "Invalid input"
+            }
         }
         btnDiv.setOnClickListener {
-            val input1 = etInput1.text.toString().toFloat()
-            val input2 = etInput2.text.toString().toFloat()
+            val input1Text = etInput1.text.toString()
+            val input2Text = etInput2.text.toString()
 
-            val result = input1 / input2
-            tvDisplay.text = result.toString()
+            val input1 = input1Text.toFloatOrNull()
+            val input2 = input2Text.toFloatOrNull()
+
+            if (input1 != null && input2 != null) {
+                if (input2 != 0f) {
+                    val result = input1 / input2
+                    tvDisplay.text = result.toString()
+                } else {
+                    tvDisplay.text = "Cannot divide by 0"
+                }
+            } else {
+                tvDisplay.text = "Invalid input"
+            }
         }
+
 
     }
 }
